@@ -4,7 +4,7 @@
 Plugin Name: Ebor Shortcodes
 Plugin URI: http://www.madeinebor.com
 Description: Adds an oEmbed widget for use in any WordPress theme.
-Version: 1.1
+Version: 1.2
 Author: TommusRhodus
 Author URI: http://www.madeinebor.com
 */	
