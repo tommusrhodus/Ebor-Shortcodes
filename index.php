@@ -4,7 +4,7 @@
 Plugin Name: Ebor Shortcodes
 Plugin URI: http://www.madeinebor.com
 Description: Adds an oEmbed widget for use in any WordPress theme.
-Version: 1.0
+Version: 1.1
 Author: TommusRhodus
 Author URI: http://www.madeinebor.com
 */	
@@ -13,8 +13,8 @@ Author URI: http://www.madeinebor.com
 /*	PLUGIN UPDATER
 /*-----------------------------------------------------------------------------------*/
 
-add_action( 'init', 'ebor_oembed_update' );
-function ebor_oembed_update() {
+add_action( 'init', 'ebor_shortcodes_update' );
+function ebor_shortcodes_update() {
 
 	include_once 'updater.php';
 
@@ -89,7 +89,7 @@ add_action('media_buttons','add_sc_select',11);
 function add_sc_select(){
     global $shortcode_tags; $shortcodes_list='';
     /** Any Shortcodes that should be excluded from this list should be added below */
-    $exclude = array("wp_caption", "embed", "gallery");
+    $exclude = array("wp_caption", "embed", "gallery", "caption", "audio", "video", "template", "rev_slider");
     echo '<select style="float:right;margin-right:15px;position:relative;top:5px;height:20px;" id="sc_select">
     <option>Insert Shortcode...</option>';
     foreach ($shortcode_tags as $key => $val){
