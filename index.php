@@ -4,7 +4,7 @@
 Plugin Name: Ebor Shortcodes
 Plugin URI: http://www.madeinebor.com
 Description: Adds simple shortcodes for use in any WordPress theme.
-Version: 1.2
+Version: 1.3
 Author: TommusRhodus
 Author URI: http://www.madeinebor.com
 */	
@@ -63,7 +63,7 @@ function ebor_button( $atts, $content = null ) {
 	), $atts));	
 	
    $output = '';
-   $output .= '<a href="'.esc_url($link).'" class="'.$size.' '.$icon_location.'">';
+   $output .= '<a href="'.esc_url($link).'" class="'.$size.' '.$icon_location.' shadowbox-button">';
    if($icon_location == 'left'){
    		if($icon) $output .= '<i class="'.$icon.'"></i> ';
    		$output .= $content;
