@@ -18,5 +18,10 @@ switch( wp_get_theme() ) {
 	case('Seabird') :
 		require_once( plugin_dir_path( __FILE__ ) .'/themes/seabird.php' );
 	break;
+	
+	case('Kyte') :
+		require_once( plugin_dir_path( __FILE__ ) .'/themes/seabird.php' );
+	break;
+	
 
 }
