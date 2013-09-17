@@ -24,7 +24,7 @@ switch( wp_get_theme() ) {
 	break;
 	
 	case('Wiretree') :
-		require_once( plugin_dir_path( __FILE__ ) .'/themes/seabird.php' );
+		require_once( plugin_dir_path( __FILE__ ) .'/themes/wiretree.php' );
 	break;
 
 }
