@@ -20,5 +20,5 @@ if( $theme_name == 'ShadowBox' || $theme_name->parent() == 'ShadowBox' ) {
 } elseif( $theme_name == 'Other' || $theme_name->parent() == 'Other' ){
 		require_once( plugin_dir_path( __FILE__ ) .'themes/other.php' );
 } else {
-		require_once( plugin_dir_path( __FILE__ ) .'themes/searbid.php' );
+		require_once( plugin_dir_path( __FILE__ ) .'themes/seabird.php' );
 }
