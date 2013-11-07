@@ -9,26 +9,16 @@ Author: TommusRhodus
 Author URI: http://www.madeinebor.com
 */
 
-switch( wp_get_theme() ) {
+$theme_name = wp_get_theme();
 
-	case('ShadowBox') :
+if( $theme_name == 'ShadowBox' || $theme_name->parent() == 'ShadowBox' ) {
 		require_once( plugin_dir_path( __FILE__ ) .'/themes/shadowbox.php' );
-	break;
-	
-	case('Seabird') :
-		require_once( plugin_dir_path( __FILE__ ) .'/themes/seabird.php' );
-	break;
-	
-	case('Kyte') :
-		require_once( plugin_dir_path( __FILE__ ) .'/themes/seabird.php' );
-	break;
-	
-	case('Marble') :
+} elseif( $theme_name == 'Marble' || $theme_name->parent() == 'Marble' ) {
 		require_once( plugin_dir_path( __FILE__ ) .'/themes/marble.php' );
-	break;
-	
-	case('Wiretree') :
+} elseif( $theme_name == 'Wiretree' || $theme_name->parent() == 'Wiretree' ){
 		require_once( plugin_dir_path( __FILE__ ) .'/themes/wiretree.php' );
-	break;
-
+} elseif( $theme_name == 'Other' || $theme_name->parent() == 'Other' ){
+		require_once( plugin_dir_path( __FILE__ ) .'/themes/other.php' );
+} else {
+		require_once( plugin_dir_path( __FILE__ ) .'/themes/searbid.php' );
 }

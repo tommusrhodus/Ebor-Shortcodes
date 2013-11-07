@@ -28,7 +28,7 @@ add_shortcode('blockquote', 'seabird_blockquote');
 
 //BREAK [break]
 function seabird_break( $atts, $content = null ) {
-   return '<div style="width: 100%; clear: both; height: 40px;"></div><hr /><div style="width: 100%; clear: both; height: 40px;"></div>';
+   return '<div style="width: 100%; clear: both; height: 40px;"></div><hr /><div style="width: 100%; clear: both; height: 60px;"></div>';
 }
 add_shortcode('break', 'seabird_break');
 
