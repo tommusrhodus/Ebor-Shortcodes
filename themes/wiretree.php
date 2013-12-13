@@ -77,13 +77,14 @@ add_shortcode('social_icon', 'wiretree_social_icon');
 //SHORTCODE DROP DOWN
 add_action('media_buttons','add_sc_select',11);
 function add_sc_select(){
-    global $shortcode_tags; $shortcodes_list='';
+    global $shortcode_tags; 
+    $shortcodes_list='';
     /** Any Shortcodes that should be excluded from this list should be added below */
-    $exclude = array("wp_caption", "embed", "gallery", "caption", "audio", "video", "template", "rev_slider");
+    $exclude = array('blockquote', 'button','clear', 'highlight', 'highlight_alt', 'dropcap', 'social_group', 'social_icon');
     echo '<select style="float:right;margin-right:15px;position:relative;top:5px;height:20px;" id="sc_select">
     <option>Insert Shortcode...</option>';
     foreach ($shortcode_tags as $key => $val){
-            if(!in_array($key,$exclude)){
+            if(in_array($key,$exclude)){
             	if($key=='blockquote'){ $output = "[blockquote author='John Doe']Content[/blockquote]"; }
             	if($key=='button'){ $output = "[button link='google.com' size='large' color='blue' target='blank']Link Text[/button]"; }
             	if($key=='clear'){ $output = "[clear]"; }
